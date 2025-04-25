@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<form action = "http://localhost:5000/login" method = "post" >
+
+    {% if errors %}
+        {% for error in errors %}
+        <p>{{error}}</p>
+        {% endfor %}
+    {% endif %}
+
+
+    <label>Username: </label>
+    <input type = "text" name = "username" placeholder = "Username">
+    <label>password: </label>
+    <input type = "password" name = "password" placeholder = "Password">
+
+    <input type = "submit" value = "Login">
+
+</form>
+
+
+
+</body>
+</html>
